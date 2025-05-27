@@ -6,7 +6,7 @@ pipeline {
     }
 
     environment {
-        DOCKER_HOST = 'tcp://docker:2375'
+        DOCKER_HOST = 'tcp://jenkins-docker:2375'
     }
 
     // tools {
