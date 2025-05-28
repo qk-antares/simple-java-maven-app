@@ -1,12 +1,13 @@
 pipeline {
     agent {
         docker {
-            image 'maven:3.9.6-eclipse-temurin-17'
+            image 'maven:3.9.6-eclipse-temurin-21'
+            // args '--network jenkins'
         }
     }
 
     environment {
-        DOCKER_HOST = 'tcp://jenkins-docker:2375'
+        DOCKER_HOST = 'tcp://docker:2375'
     }
 
     // tools {
